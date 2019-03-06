@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>web sockets</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+
+  	<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+
+
+</head>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+
+	<style type="text/css">
+		
+		#div1{
+			margin-top: 0px;
+			height: 630px;
+			background-color: #f5f5f0;
+			border: 1px solid gray;
+			border-radius: 5px;
+		}
+
+		.mssgdiv{
+			margin-top: 0px;
+			border-radius: 8px;	
+			margin: 20px;
+			background-color: white;
+		}
+
+	
+		body, html {
+  height: 100%;
+}
+
+	</style>
+
+</head>
+<body>
+	
+	 <div class="bg"></div>
+
+	<div class="row">
+		<div class="col-md-4">
+			
+
+			<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+  Click to KnowMore
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Open two tabs Simultaneously and Chat to Explore
+      </div>
+    </div>
+  </div>
+</div>
+
+
+		</div>
+		<div id="div1" class="col-md-4">
+			<div id="chatwindow" style="height: 430px;overflow: auto;">
+				<div id="output">
+					
+				</div>
+				<div id="feedback">
+					
+				</div>
+			</div>
+
+
+			<div class="md-form">
+			  <input type="text" class="form-control" id="myname" placeholder="Handle">
+			  
+			</div>
+
+			<div class="md-form">
+			  <input type="text" class="form-control" id="mssg" placeholder="Message">
+			  
+			</div>
+
+			<button type="button" class="btn btn-success" id="btn" style="width: 100%;">Send</button>
+		</div>	
+	</div>
+
+	<script type="text/javascript" src="/chat.js"></script>
+</body>
+</html>
